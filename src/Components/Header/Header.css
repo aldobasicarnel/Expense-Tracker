@@ -1,0 +1,30 @@
+.navbar {
+  position: absolute;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.logo {
+  color: #fff;
+  padding: 7px 15px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.navbar-ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-li {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+}
