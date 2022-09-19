@@ -1,10 +1,17 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
 const Balance = () => {
+  const transactions = useSelector((state) => state.transactions);
+
+  const totalAmount = transactions.reduce(
+    (exp, item) => (exp += item.amount),
+    0
+  );
+
   return (
-    <div className="balance-card">
+    <div>
       <span>Your Balance:</span>
-      <span> $0.00</span>
+      <span>${totalAmount}</span>
     </div>
   );
 };
