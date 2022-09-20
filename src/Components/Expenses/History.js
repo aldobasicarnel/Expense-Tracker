@@ -5,9 +5,7 @@ const History = () => {
   const transactions = useSelector((state) => state.transactions);
 
   const dispatch = useDispatch();
-
-  const deleteHandler = (id) => {
-    console.log(id);
+  const handlerDelete = (id) => {
     dispatch({ type: "DELETE", payload: id });
   };
 
@@ -22,10 +20,10 @@ const History = () => {
               {item.amount < 0 ? "-" : "+"}${Math.abs(item.amount)}
             </span>
             <button
-              onClick={() => deleteHandler(item.id)}
+              onClick={() => handlerDelete(item.id)}
               className="delete-btn"
             >
-              X
+              Delete
             </button>
           </li>
         ))}

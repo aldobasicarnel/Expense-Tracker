@@ -1,0 +1,8 @@
+.cardTitle {
+  width: 100vw;
+  padding: 1rem 1rem;
+}
+.title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
