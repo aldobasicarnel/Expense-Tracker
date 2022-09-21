@@ -19,12 +19,9 @@ if (process.env.NODE_ENV === "development") {
 
 app.use("/api/transactions", transactions);
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 7006;
-}
+const PORT = process.env.PORT || 7006;
 
-app.listen(port, function (req, res) {
+app.listen(PORT, function (req, res) {
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   );
