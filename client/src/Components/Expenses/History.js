@@ -9,7 +9,7 @@ const History = () => {
 
   async function handlerDelete(id) {
     try {
-      await axios.delete(`/api/transaction/${id}`);
+      await axios.delete(`/api/transactions/${id}`);
       dispatch({ type: "DELETE", payload: id });
     } catch (err) {
       console.log(err);
