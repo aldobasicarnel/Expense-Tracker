@@ -1,23 +1,32 @@
 import { useState, React } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 
 const AddingForm = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
-  const onFormSubmit = (e) => {
+  async function onFormSubmit(e) {
     e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random() * 10000),
       text,
       amount: +amount,
     };
-    dispatch({ type: "ADD_TRANSACTION", payload: newTransaction });
+
+    const config = { headers: { "Content-Type": "application/json" } };
+
+    try {
+      const res = await axios.post("/api/transactions", newTransaction, config);
+      dispatch({ type: "ADD_TRANSACTION", payload: res.data.data });
+    } catch (err) {
+      console.log(err);
+    }
+
     setText("");
     setAmount(0);
-  };
+  }
 
   return (
     <>

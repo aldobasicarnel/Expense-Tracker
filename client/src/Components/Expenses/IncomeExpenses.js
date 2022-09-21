@@ -24,7 +24,7 @@ const IncomeExpenses = () => {
       </div>
       <div>
         <span>Expsense</span>
-        <div className="money-minus">${expense}</div>
+        <div className="money-minus">$-{expense}</div>
       </div>
     </div>
   );
