@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(
-      "mongodb://localhost:27017/transactionDB",
+      "mongodb+srv://admin-user:test12345@cluster0.wcs7owy.mongodb.net/transactionDB",
       {
         useNewUrlParser: true,
       }
