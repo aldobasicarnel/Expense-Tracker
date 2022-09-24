@@ -25,7 +25,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function (req, res) {
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  );
+  console.log(`Server running in development mode on port 8000`);
 });
