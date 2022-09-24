@@ -8,6 +8,7 @@ const connectDB = async () => {
         useNewUrlParser: true,
       }
     );
+    ç;
     console.log("Database connected");
   } catch (err) {
     console.log(err);

@@ -16,9 +16,6 @@
   },
   "author": "Arnel",
   "license": "ISC",
-  "engines": {
-    "node": "16.17.0"
-  },
   "bugs": {
     "url": "https://github.com/aldobasicarnel/Expense-Tracker/issues"
   },
