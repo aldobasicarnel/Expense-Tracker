@@ -148,3 +148,8 @@ input[type="number"] {
 .form-control {
   margin-bottom: 10px;
 }
+@media (max-width: 400px) {
+  .container {
+    width: 100vw;
+  }
+}
